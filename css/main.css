@@ -1,0 +1,140 @@
+#start-page {
+  text-align: center;
+}
+
+#start-page::after {
+  content: "";
+  width: 100%;
+  height: 320px;
+  background-color: #f79596;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  border-top-left-radius: 80px;
+  border-bottom-right-radius: 80px;
+}
+
+#start-page .content_wrapper {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  height: inherit;
+}
+
+#start-page .content_wrapper .section-body {
+  flex: 1;
+}
+
+#start-page .avatar {
+  width: 220px;
+  height: 220px;
+  margin: 15px auto;
+  animation: zoom-breath 2s ease-in-out infinite;
+}
+
+#start-page .avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+#start-page footer {
+  position: relative;
+  width: calc(100% + 30px);
+  left: -15px;
+  bottom: -15px;
+  background-color: #fa6060;
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
+  overflow: hidden;
+}
+
+#start-page footer a {
+  width: 100%;
+  height: 100%;
+  display: block;
+  padding: 20px;
+}
+
+#middle-page .section-body {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+}
+
+#middle-page .section-body > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  animation: zoom-in 0.5s ease-in-out forwards;
+}
+
+#middle-page .section-body > div img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+#end-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#end-page .section-body {
+  position: absolute;
+  width: 100%;
+  height: max-content;
+  padding: 15px;
+  text-align: center;
+}
+
+#end-page .section-body img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+#end-page .zoom-transition {
+  animation: zoom-in-transition 0.8s cubic-bezier(0.95, 0.05, 0.795, 0.035) forwards;
+}
+
+#end-page .section-body {
+  transform: scale(0);
+  animation: zoom-in 0.8s ease-in-out forwards;
+  animation-delay: 0.4s;
+}
+
+@keyframes zoom-in {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+@keyframes zoom-in-transition {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(20);
+  }
+}
+
+@keyframes zoom-breath {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.25);
+  }
+  100% {
+    transform: scale(1);
+  }
+}

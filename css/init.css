@@ -1,0 +1,98 @@
+:root {
+  --container-width: 430px;
+  --section-padding: 15px;
+}
+
+* {
+  font-size: inherit;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+@font-face {
+  font-family: Pecita;
+  src: url(../fonts/Pecita.otf);
+}
+
+@font-face {
+  font-family: ShortStack;
+  src: url(../fonts/ShortStack.ttf);
+}
+
+body {
+  color: white;
+  background-color: rgb(230, 230, 230);
+  font-size: 16px;
+  font-family: ShortStack;
+}
+
+img {
+  user-select: none;
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+h1 {
+  font-size: 42px;
+  font-family: Pecita;
+  font-weight: normal;
+}
+
+.text {
+  line-height: 1.6;
+}
+
+.black {
+  color: black !important;
+}
+
+.text.small {
+  font-size: 13px;
+  opacity: 0.5;
+}
+
+.container {
+  max-width: var(--container-width);
+  height: var(--screen-size);
+  margin: auto;
+}
+
+.container main {
+  background-color: #ffafb0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+}
+
+.container main section {
+  width: inherit;
+  height: inherit;
+  position: relative;
+  padding: var(--section-padding);
+  overflow: hidden;
+}
+
+.mt-15 {
+  margin-top: 15px;
+}
+
+.mt-5 {
+  margin-top: 5px;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.hide {
+  display: none !important;
+}
+
+.hidden {
+  opacity: 0;
+}
